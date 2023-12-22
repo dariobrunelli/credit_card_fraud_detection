@@ -24,7 +24,7 @@ The dataset comprises numerical features extracted from clients' credit card tra
 
 ### 3. Deployment Strategy
 
-- **Real-time Querying**: Design a deployment strategy with the aim of querying the trained model in real-time (see below for the suggested deployment strategy).
+- **Real-time Querying**: Design a deployment strategy with the aim of querying the trained model in real-time.
 
 ## Repository Contents
 
@@ -49,51 +49,3 @@ The dataset comprises numerical features extracted from clients' credit card tra
 
 > [!NOTE]
 > I run the code with *Google Colab* from a *Google Drive* folder, as it was faster in training the models than my local CPU
-
----
-
-# Model Deployment Strategy for Credit Card Fraud Detection
-
-### Goal
-The primary objective of the deployment strategy is to integrate the trained Credit Card Fraud Detection model, selected among the ones inspected, into a real-time system, allowing for on-the-fly predictions.
-
-## Steps
-
-1. **Model Serialization:**
-   - Serialize the trained model into a deployable format (e.g., pickle, joblib) for ease of deployment.
-
-2. **Containerization:**
-   - Utilize containerization tools like Docker to encapsulate the model and its dependencies into a standalone container. This ensures consistency and portability across different environments.
-
-3. **Model API:**
-   - Develop a RESTful API (Application Programming Interface) to expose the model's prediction functionality. Tools like Flask or FastAPI can be employed for this purpose.
-
-4. **Cloud Deployment:**
-   - Deploy the containerized model on a cloud platform (e.g., AWS, Azure, Google Cloud) for scalability, reliability, and ease of maintenance.
-
-5. **Load Balancing:**
-   - Implement load balancing mechanisms to distribute incoming prediction requests evenly across multiple instances of the deployed model. This ensures optimal performance during varying levels of traffic.
-
-6. **Monitoring and Logging:**
-   - Set up monitoring tools to track model performance, response times, and resource utilization. Implement logging to record important events and errors for later analysis.
-
-7. **Security Measures:**
-   - Implement security measures to safeguard the deployed model and API. This includes authentication mechanisms, encryption, and access controls.
-
-8. **Scaling and Autoscaling:**
-   - Design the deployment to scale horizontally by adding more instances based on demand. Implement autoscaling policies to automatically adjust the number of instances to handle varying workloads.
-
-9. **Continuous Integration/Continuous Deployment (CI/CD):**
-   - Establish a CI/CD pipeline to facilitate automated testing, model updates, and seamless deployment. This ensures a smooth workflow from development to production.
-
-10. **Documentation:**
-    - Provide comprehensive documentation for developers and stakeholders, detailing how to interact with the API, expected inputs, and interpretation of outputs.
-
-11. **Feedback Loop:**
-    - Set up a feedback loop to continuously monitor model performance in the production environment. Use the insights gained to refine and improve the model over time.
-
-12. **Versioning:**
-    - Implement version control for the deployed model to support backward compatibility and easy rollback in case of issues with newer versions.
-
-Adjustments may be necessary based on specific requirements and the chosen deployment environment.
-
