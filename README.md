@@ -44,7 +44,7 @@ Given the application context, prioritizing the minimization of false negatives 
 - **requirements.txt**: Contains the necessary Python modules to be installed to run the code.
 
 ## Instructions
-
+### Usage in local machine
 1. Clone this repository to your local machine.
 
   ```
@@ -57,6 +57,11 @@ Given the application context, prioritizing the minimization of false negatives 
   pip install -r requirements.txt
   ```
 4. Execute the code in *fraud_detection.ipynb* to perform data exploration, model training, and any other necessary tasks.  
+
+### Usage in Google Colab
+1. Download the repository from Github, unzip it and upload the file *fraud_detection.ipynb* in a folder on your Google Drive and rename the folder ***'Credit Card Fraud Detection'***
+2. Download the [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/) dataset and store it in the folder ***'Credit Card Fraud Detection'*** in your Google Drive, where the file *fraud_detection.ipynb* is. 
+3. Run the code *fraud_detection.ipynb* with *Google Colab* directly from the Google Drive folder to perform data exploration, model training, and any other necessary tasks. 
 
 > [!NOTE]
 > I ran the code on *Google Colab* from a *Google Drive* folder since it proved to be faster in training the models compared to my local CPU.
