@@ -12,25 +12,36 @@ The dataset comprises numerical features extracted from clients' credit card tra
 
 ### 1. Data Exploration
 
-- **Understanding the Structure**: Explore the dataset to gain insights into its structure and identify any necessary data preparation steps.
+- **Understanding the Structure**: The dataset is explored to gain insights into its structure and to identify any necessary data preparation steps.
 
 ### 2. Data Preparation and Model Training
 
-- **Classifier Selection**: Choose an appropriate classification algorithm for the task.
+- **Classifier Selection**: The classification algorithm selected for the task is Random Forest.
 
-- **Model Training**: Train the selected classifier using the dataset.
+- **Model Training**: The selected classifier is trained using the dataset.
 
-- **Imbalanced Dataset Handling**: Apply techniques such as undersampling or oversampling to address the class imbalance and enhance model performance.
+- **Imbalanced Dataset Handling**: The following techniques are applied to address the class imbalance and enhance model performance:  
+  1. Weightd classes
+  2. Random oversampling
+  3. Random undersampling
+  4. SMOTE - Synthetic Minority Oversampling Technique
+  5. Combined approach of undersampling, SMOTE and weighted classes  
+  
+### 4. Deployment Strategy
 
-### 3. Deployment Strategy
+A deployment strategy design with the aim of querying the trained model in real-time is suggested.
 
-- **Real-time Querying**: Design a deployment strategy with the aim of querying the trained model in real-time.
+## Considerations
+Some of the aforementioned techniques contribute to enhancing the model's performance.  
+However, in the presence of such an imbalanced dataset, effectively tackling the challenge of minimizing both false positives (legitimate transactions classified as fraudulent) and false negatives (fraudulent transactions classified as legitimate) poses a particular difficulty.  
+Given the application context, prioritizing the minimization of false negatives becomes more crucial. These represent fraudulent transactions that manage to go undetected, making it more significant to select a model proficient at identifying false negatives.
 
 ## Repository Contents
 
-- **Codebase**: Contains the implementation of the classification task.
+- **fraud_detection.ipynb**: Contains the implementation of the classification task.
 
 - **README.md**: This documentation providing an introduction, task description, and instructions.
+- **requirements.txt**: Contains the necessary Python modules to be installed to run the code.
 
 ## Instructions
 
@@ -48,4 +59,4 @@ The dataset comprises numerical features extracted from clients' credit card tra
 4. Execute the code in *fraud_detection.ipynb* to perform data exploration, model training, and any other necessary tasks.  
 
 > [!NOTE]
-> I run the code with *Google Colab* from a *Google Drive* folder, as it was faster in training the models than my local CPU
+> I ran the code on *Google Colab* from a *Google Drive* folder since it proved to be faster in training the models compared to my local CPU.
